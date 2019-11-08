@@ -22,4 +22,8 @@ class Show < ActiveRecord::Base
   def self.popular_shows
     all.filter { |s| s.rating > 5}
   end
+  
+  def self.shows_by_alphabetical_order
+    
+  end
 end
