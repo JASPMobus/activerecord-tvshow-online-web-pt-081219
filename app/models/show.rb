@@ -19,4 +19,7 @@ class Show < ActiveRecord::Base
     Show.sum(:rating)
   end
   
+  def self.popular_shows
+    all.filter { |s| s.rating > 5}
+  end
 end
