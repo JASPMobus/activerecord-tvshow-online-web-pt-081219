@@ -20,7 +20,7 @@ class Show < ActiveRecord::Base
   end
   
   def self.popular_shows
-    all.filter { |s| s.rating > 5}
+    Show.where(rating: 3)
   end
   
   def self.shows_by_alphabetical_order
